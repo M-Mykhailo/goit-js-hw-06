@@ -9,7 +9,7 @@ const defaultSize = 30;
 const step = Number(inputNumb.step);
 const min = Number(inputNumb.min);
 const max = Number(inputNumb.max);
-const message = "Неправильна кількість";
+const message = "Invalid number of items entered!";
 
 let inputValue = defaultInputValue;
 let size = defaultSize;
