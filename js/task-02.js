@@ -7,13 +7,19 @@ const ingredients = [
   'Condiments',
 ];
 
-const elList = document.querySelector('#ingredients');
+const elList = document.querySelector("#ingredients");
 
-const elItem = ingredients
-  .map((ingredient) => `<li>${ingredient}</li>`)
-  .join(' ');
+for (const ingredient of ingredients) {
+  const elItem = document.createElement("li");
+  elItem.textContent = ingredient;
+  elList.append(elItem);
+}
+
+
+// const elItem = ingredients
+//   .map((ingredient) => `<li>${ingredient}</li>`)
+//   .join(' ');
   
-elList.insertAdjacentHTML('afterbegin', elItem);
-
+// elList.insertAdjacentHTML('afterbegin', elItem);
 
 

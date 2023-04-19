@@ -13,7 +13,6 @@ const images = [
   },
 ];
 
-
 const listGallery = document.querySelector('.gallery');
 
 const itemGallery = images

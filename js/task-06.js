@@ -1,21 +1,17 @@
-const inputText = document.getElementById('validation-input');
+const inputText = document.getElementById("validation-input");
 
-inputText.addEventListener('blur', addBorderColor);
+inputText.addEventListener("blur", addBorderColor);
 
-const dataLength = inputText.getAttribute('data-length');
+const dataLength = inputText.getAttribute("data-length");
 
 function addBorderColor(event) {
-    const valueLength = event.target.value.trim().length;
+  const valueLength = event.target.value.trim().length;
 
-    if (Number(dataLength) === valueLength) {
-        
-        inputText.classList.add('valid');
-        inputText.classList.remove('invalid');
-
-    } else {
-
-        inputText.classList.add('invalid');
-        inputText.classList.remove('valid');
-    }
+  if (Number(dataLength) === valueLength) {
+    inputText.classList.add("valid");
+    inputText.classList.remove("invalid");
+  } else {
+    inputText.classList.add("invalid");
+    inputText.classList.remove("valid");
+  }
 }
-

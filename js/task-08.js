@@ -1,23 +1,27 @@
-const mainForm = document.querySelector('.login-form');
+const mainForm = document.querySelector(".login-form");
 
-mainForm.addEventListener('submit', onSubmit);
+mainForm.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
-    event.preventDefault()
-    let objectForm = {};
+  event.preventDefault();
+  let objectForm = {};
 
-    const emailValue = mainForm.elements.email.value.trim();
-    const passwordValue = mainForm.elements.password.value.trim();
-    const emailName = mainForm.elements.email.name;
-    const passwordName = mainForm.elements.password.name;
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-    if (emailValue === '' || passwordValue === '') {
-        return alert('You have unfilled fields!!!');
-    }
+  if (email.value.trim() === "" || password.value.trim() === "") {
+    return alert("You have unfilled fields!!!");
+  }
 
-    objectForm[emailName] = emailValue;
-    objectForm[passwordName] = passwordValue;
-    console.log(objectForm);
+  objectForm[email.name] = email.value.trim();
+  objectForm[password.name] = password.value.trim();
+  console.log(objectForm);
 
-    mainForm.reset();
+  mainForm.reset();
 }
+
+// const emailValue = mainForm.elements.email.value.trim();
+// const passwordValue = mainForm.elements.password.value.trim();
+// const emailName = mainForm.elements.email.name;
+// const passwordName = mainForm.elements.password.name;
