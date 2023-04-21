@@ -7,13 +7,29 @@ const ingredients = [
   'Condiments',
 ];
 
-const elList = document.querySelector("#ingredients");
+const ingredientsEl = document.querySelector("#ingredients");
+const itemsEl = ingredients.map((ingredient) => {
+  const item = document.createElement("li");
+  item.textContent = ingredient;
+  item.classList.add("item");
+  return item;
+});
+ingredientsEl.append(...itemsEl);
 
-for (const ingredient of ingredients) {
-  const elItem = document.createElement("li");
-  elItem.textContent = ingredient;
-  elList.append(elItem);
-}
+
+
+
+
+
+
+// const elList = document.querySelector("#ingredients");
+
+// for (const ingredient of ingredients) {
+//   const elItem = document.createElement("li");
+//   elItem.textContent = ingredient;
+//   elItem.classList.add('item')
+//   elList.append(elItem)
+// }
 
 
 // const elItem = ingredients
@@ -21,5 +37,3 @@ for (const ingredient of ingredients) {
 //   .join(' ');
   
 // elList.insertAdjacentHTML('afterbegin', elItem);
-
-

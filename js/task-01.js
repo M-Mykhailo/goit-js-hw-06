@@ -6,7 +6,7 @@ const itemEl = document.querySelectorAll(".item");
 
 itemEl.forEach((item) => {
   const category = item.firstElementChild.textContent;
-  const elements = item.querySelector("ul");
+  const elements = item.lastElementChild;
   console.log(`Category: ${category}`);
   console.log(`Elements: ${elements.children.length}`);
 });
